@@ -1,0 +1,140 @@
+<div class="advance-menu p-3">
+        <span style="font-size: 24px">
+          <b> Cartola de Anticipos</b>
+        </span>
+
+
+
+
+  <%if session[:user_id] %>
+    <%= link_to "Anticipar Factura", anticipate_invoice_path, class:"align-right btn btn-primary mr-3" ,style:"background: #0055B8" %>
+  <%else %>
+    <%= link_to "Anticipar Factura", anticipate_invoice_path, class:"align-right btn btn-primary mr-3 disabled" ,style:"background: #0055B8" %>
+<%end %>
+
+
+
+
+
+</div>
+
+
+
+
+<!--Sub Menu-->
+<ul class="d-flex p-3 mt-3 submenu-ul">
+  <li>
+    <a href="#" class="nav-item active" active-color="orange">Ultimos Anticipos</a>
+
+  </li>
+
+  <li>
+    <a href="#" class="nav-item" active-color="green">Simular Anticipos</a>
+
+  </li>
+
+  <li>
+    <a href="#" class="nav-item" active-color="blue">Mis Deudores</a>
+  </li>
+
+
+</ul>
+<p class="notice"></p>
+<%if session[:user_id] %>
+<%else %>
+  <div class="alert alert-primary">
+    Se debe de iniciar sesión antes de anticipar la factura
+  </div>
+<%end %>
+
+
+<div class="d-flex search-bar-style">
+  <div class="input-group col-3">
+    <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">
+              <%=image_tag("search-interface-symbol.svg", size:"20x20") %>
+            </span>
+    </div>
+    <input type="text" class="form-control" placeholder="Deudor" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="col-3">
+    <select class="custom-select">
+      <option selected> Ordenar... </option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+
+</div>
+
+
+<div>
+
+
+  <!--Table data-->
+  <table class = "table table-hover advance-table">
+    <thead class = "">
+    <tr>
+      <th >ID</th>
+      <th>Deudor</th>
+      <th>Fecha</th>
+      <th>N°Facturas</th>
+      <th>% Anticipo</th>
+      <th>Monto Final</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @invoices.each do |inv| %>
+      <tr class="tr">
+        <td > <%=inv.id %> </td>
+        <td> <%=inv.debtor %></td>
+        <td> <%= inv.date %> </td>
+        <td> <%= inv.invoice_number %></td>
+        <td> <%= inv.advance_per %> </td>
+        <td> <%= inv.final_amount %><</td>
+        <td>
+          <button class="btn-warning btn" style="color: white">
+            <%=inv.status %>
+          </button>
+        </td>
+        <td>
+
+          <!-- Profile Button dropdown options -->
+          <div class="btn-group align-right">
+            <a type="button" class="btn more-opt" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag("more.png", size: "25x25") %>
+
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+
+                <%= link_to "Mi Perfil", "#", class: "dropdown-item" %>
+                <%= link_to "Preferencias", "#", class: "dropdown-item" %>
+                <%= link_to "Log Out", logout_path, class:"dropdown-item", method: :post %>
+
+
+
+            </div>
+
+          </div>
+
+
+        </td>
+
+      </tr>
+
+    <% end %>
+
+    </tbody>
+  </table>
+
+  <%== pagy_nav(@pagy) %>
+
+
+
+</div>

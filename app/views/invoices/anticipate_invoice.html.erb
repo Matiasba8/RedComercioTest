@@ -1,0 +1,39 @@
+<h1 class="log_in_ms">
+  Anticipar Factura
+</h1>
+
+<%= form_with(url: pay_invoice_path) do |form| %>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :deudor %>
+    <%= form.text_field :debtor, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :monto_total %>
+    <%= form.text_field :final_amount, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :porcentaje_de_anticipo %>
+    <%= form.text_field :advance_per, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :numero_de_factura %>
+    <%= form.text_field :invoice_number, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= hidden_field_tag 'status', 'procesando'  %>
+  </div>
+
+
+  <div class="mb-3 log_in_ms">
+    <%= form.submit class: "btn btn-primary", method: :post%>
+  </div>
+
+
+
+
+<% end %>

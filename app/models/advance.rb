@@ -1,0 +1,2 @@
+class Advance < ApplicationRecord
+end

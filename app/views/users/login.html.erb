@@ -1,0 +1,24 @@
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<h1>Iniciar Sesión</h1>
+
+<%= form_with(url: check_login_path) do |form| %>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :password %>
+    <%= form.password_field :password, class:"form-control" %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.submit class: "btn btn-primary", method: :post%>
+  </div>
+<% end %>

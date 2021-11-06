@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  debtor: MyString
+  date: 2021-11-05 14:41:40
+  invoice_number: 1
+  advance_per: 1
+  status: 1
+
+two:
+  debtor: MyString
+  date: 2021-11-05 14:41:40
+  invoice_number: 1
+  advance_per: 1
+  status: 1
