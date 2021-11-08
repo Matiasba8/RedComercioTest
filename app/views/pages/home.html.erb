@@ -83,7 +83,7 @@
               <%=image_tag("search-interface-symbol.svg", size:"20x20") %>
             </span>
     </div>
-    <input type="text" class="form-control" placeholder="Deudor" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="search-bar" type="text" class="form-control" placeholder="Deudor" aria-label="Username" aria-describedby="basic-addon1">
   </div>
 
   <div class="col-3">
@@ -163,6 +163,40 @@
 
 
   <script>
+
+    let search_bar = document.querySelector("#search-bar");
+    let trs = document.querySelectorAll(".tr");
+    let myArray = Array.prototype.slice.call(trs,0)
+
+
+    search_bar.addEventListener('keyup', (e) =>{
+
+
+
+        trs.forEach(function(value,index, parent){
+            console.log(value.children[1].innerHTML)
+        })
+
+        var PATTERN = e.target.value,
+            filtered = myArray.filter(function (str) {
+                console.log(str)
+                return str.children[1].innerHTML.includes(PATTERN); });
+
+
+        trs.forEach(function(value,index, parent){
+            value.remove()
+        })
+
+
+        let tbody = document.querySelector("#tbody")
+
+
+        filtered.forEach(function(value,index,parent){
+            tbody.append(value)
+        })
+    })
+
+
 
       function orderTable(index){
           let selectedItem;
