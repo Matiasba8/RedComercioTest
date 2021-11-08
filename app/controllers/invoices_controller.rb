@@ -29,11 +29,34 @@ class InvoicesController < ApplicationController
     end
   end
 
+  # render edit form
+  def edit
+    $advance = Advance.find_by(id: params[:id])
+    $advance_id = $advance.id
+  end
+
+  # PATCH/PUT /users/1 or /users/1.json
+  def update
+
+    $advance = Advance.find_by(id: $advance_id)
+
+    respond_to do |format|
+      if $advance.update(advance_params)
+        format.html { redirect_to root_path notice: "Advance was successfully updated." }
+        format.json { render :show, status: :ok, location: @advance }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @advance.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
 
   # DELETE
   def delete_advance
+    @invoice = Advance.find_by(id: params[:id])
+
     @invoice.destroy
-    puts "ADVANCE"
     respond_to do |format|
       format.html { redirect_to root_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
@@ -52,7 +75,7 @@ class InvoicesController < ApplicationController
   # Only allow a list of trusted parameters through.
   def advance_params
     begin
-      params.permit(:debtor, :date,:invoice_number, :advance_per, :status, :user)
+      params.permit(:debtor, :date,:invoice_number, :advance_per, :status, :user, :final_amount, :user_id)
     rescue
     end
 

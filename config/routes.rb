@@ -18,5 +18,8 @@ Rails.application.routes.draw do
   post "pay_invoice", to: "invoices#pay_invoice"
   #Borrar Anticipo
   post "delete_advance/:id", to: "invoices#delete_advance"
+  #Modificar Anticipo
+  get "advances/:id/edit", to: "invoices#edit"
+  post "update", to: "invoices#update"
 
 end

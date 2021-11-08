@@ -10949,3 +10949,1241 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 0.5ms | Allocations: 14914)
 
 
+Started GET "/" for ::1 at 2021-11-07 23:05:38 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.6ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 72.0ms | Allocations: 17614)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 104.4ms | ActiveRecord: 2.3ms | Allocations: 30686)
+
+
+Started GET "/" for ::1 at 2021-11-08 12:16:56 -0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 109.0ms | Allocations: 17624)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 342ms (Views: 272.4ms | ActiveRecord: 1.8ms | Allocations: 30701)
+
+
+Started POST "/delete_advance/10" for ::1 at 2021-11-08 12:24:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"10"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 440)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (6.0.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (6.0.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.4.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.4.1) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.4.1) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.4.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.4.1) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.4.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.4.1) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.4.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.4.1) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/cookies.rb:654:in `call'
+activerecord (6.0.4.1) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.4.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.10) lib/puma/configuration.rb:228:in `call'
+puma (4.3.10) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.10) lib/puma/server.rb:472:in `process_client'
+puma (4.3.10) lib/puma/server.rb:328:in `block in run'
+puma (4.3.10) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-11-08 12:49:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 36.9ms | Allocations: 10728)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 0.7ms | Allocations: 22654)
+
+
+Started POST "/delete_advance/1" for ::1 at 2021-11-08 12:49:44 -0300
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"1"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1110)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:35:in `delete_advance'
+Started GET "/" for ::1 at 2021-11-08 12:51:55 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 36.8ms | Allocations: 10141)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 58.8ms | ActiveRecord: 2.2ms | Allocations: 20935)
+
+
+Started POST "/delete_advance/1" for ::1 at 2021-11-08 12:51:58 -0300
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"1"}
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:35:in `delete_advance'
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+  [1m[36mAdvance Destroy (0.5ms)[0m  [1m[31mDELETE FROM "advances" WHERE "advances"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 8.0ms | Allocations: 4217)
+
+
+Started GET "/" for ::1 at 2021-11-08 12:51:58 -0300
+Processing by PagesController#home as */*
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.9ms | Allocations: 5227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.7ms | Allocations: 14964)
+
+
+Started GET "/" for ::1 at 2021-11-08 12:52:11 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5204)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.4ms | Allocations: 14803)
+
+
+Started POST "/delete_advance/2" for ::1 at 2021-11-08 12:52:15 -0300
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"2"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:35:in `delete_advance'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+  [1m[36mAdvance Destroy (0.4ms)[0m  [1m[31mDELETE FROM "advances" WHERE "advances"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+  [1m[35m (81.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:38:in `delete_advance'
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 81.9ms | Allocations: 3730)
+
+
+Started GET "/" for ::1 at 2021-11-08 12:52:15 -0300
+Processing by PagesController#home as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.5ms | Allocations: 5175)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.5ms | Allocations: 14906)
+
+
+Started GET "/" for ::1 at 2021-11-08 12:52:21 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.3ms | Allocations: 5177)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.4ms | Allocations: 14776)
+
+
+Started GET "/" for ::1 at 2021-11-08 13:08:24 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.6ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 543.6ms | Allocations: 80390)
+Completed 500 Internal Server Error in 571ms (ActiveRecord: 2.3ms | Allocations: 83999)
+
+
+  
+ActionView::Template::Error (undefined method `edit_advance_path' for #<#<Class:0x00005633ed661d50>:0x00005633ed6550c8>):
+    143:             <div class="dropdown-menu dropdown-menu-right">
+    144: 
+    145:               <%= link_to "Eliminar", "javascript:void(0)", class: "dropdown-item", onclick: "borrarAvances(#{inv.id })" %>
+    146:               <%= link_to "Modificar", edit_advance_path(inv.id), class: "dropdown-item" %>
+    147: 
+    148: 
+    149: 
+  
+app/views/pages/home.html.erb:146
+app/views/pages/home.html.erb:122
+Started GET "/" for ::1 at 2021-11-08 13:09:49 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3719)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms | Allocations: 5595)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Integer into String):
+    143:             <div class="dropdown-menu dropdown-menu-right">
+    144: 
+    145:               <%= link_to "Eliminar", "javascript:void(0)", class: "dropdown-item", onclick: "borrarAvances(#{inv.id })" %>
+    146:               <%= link_to "Modificar", "advances/" + inv.id + "/edit", class: "dropdown-item" %>
+    147: 
+    148: 
+    149: 
+  
+app/views/pages/home.html.erb:146:in `+'
+app/views/pages/home.html.erb:146
+app/views/pages/home.html.erb:122
+Started GET "/" for ::1 at 2021-11-08 13:09:59 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 24.3ms | Allocations: 6126)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 69.0ms | ActiveRecord: 0.5ms | Allocations: 17668)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:10:03 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 211.4ms | Allocations: 5663)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 299ms (Views: 297.5ms | ActiveRecord: 0.0ms | Allocations: 15220)
+
+
+Started GET "/" for ::1 at 2021-11-08 13:11:12 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 38.0ms | Allocations: 10184)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 60.7ms | ActiveRecord: 2.1ms | Allocations: 20973)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:11:16 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3830)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 12998)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 4132)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 14814)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:12:44 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 4127)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 52.9ms | ActiveRecord: 2.0ms | Allocations: 21237)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:14:24 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 42.6ms | ActiveRecord: 0.3ms | Allocations: 16157)
+
+
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:15:00 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.4ms | ActiveRecord: 0.2ms | Allocations: 16165)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:15:09 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"Sl96KzPtEXNe0sFkBHbSJ4BId/HBVNfQOWd2Q4VY2YlT7b1QZsu4Xfj/rorVAu3zeQsyeaw4qkrTD2pdv1anPA==", "debtor"=>"3", "final_amount"=>"3", "advance_per"=>"3", "invoice_number"=>"3", "status"=>"3", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:40:in `update'
+[31mUnpermitted parameters: :authenticity_token, :final_amount, :user_id, :commit[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 1899)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:44:in `block in update'
+app/controllers/invoices_controller.rb:43:in `update'
+Started GET "/advances/3/edit" for ::1 at 2021-11-08 13:17:10 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 30.6ms | ActiveRecord: 1.6ms | Allocations: 20517)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:17:11 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"ASkarTKD9kDex75kmewGpBI5832F3JNunYg3lBCRFz0Ym93WZ6Vfbnjq0YpImDlw63q29eiw7vR34CuKKp9piA==", "debtor"=>"3", "final_amount"=>"3", "advance_per"=>"3", "invoice_number"=>"3", "status"=>"3", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:41:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 1908)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:45:in `block in update'
+app/controllers/invoices_controller.rb:44:in `update'
+Started POST "/delete_advance/3" for ::1 at 2021-11-08 13:17:37 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"3"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:58:in `delete_advance'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:60:in `delete_advance'
+  [1m[36mAdvance Destroy (0.3ms)[0m  [1m[31mDELETE FROM "advances" WHERE "advances"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/invoices_controller.rb:60:in `delete_advance'
+  [1m[35m (40.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:60:in `delete_advance'
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 43.5ms | Allocations: 9801)
+
+
+Started GET "/" for ::1 at 2021-11-08 13:17:38 -0300
+Processing by PagesController#home as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 16.6ms | Allocations: 5779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 0.6ms | Allocations: 16180)
+
+
+Started GET "/" for ::1 at 2021-11-08 13:18:36 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.6ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 44.3ms | Allocations: 9739)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 84.5ms | ActiveRecord: 2.2ms | Allocations: 20588)
+
+
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:18:38 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.4ms | Allocations: 14636)
+
+
+Started GET "/advances/6/edit" for ::1 at 2021-11-08 13:19:14 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.9ms | Allocations: 4796)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 32.3ms | ActiveRecord: 2.0ms | Allocations: 20547)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:19:55 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"ah13DlZ+XZPEGZVISb6femF/hfdK8WtV9DzkZ2oQ+7pzr7B1A1j0vWI0+qaYyqCumDzAfyedFs8eVPh5UB6FDw==", "debtor"=>"4", "final_amount"=>"4", "advance_per"=>"4", "invoice_number"=>"4", "status"=>"4", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:42:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 1918)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:46:in `block in update'
+app/controllers/invoices_controller.rb:45:in `update'
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:21:22 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 35.4ms | ActiveRecord: 1.6ms | Allocations: 20532)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:21:41 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"TznUQKyRcxOpGbq4FsmvQOykxoCMN2b6qlARs9LsXQ5WixM7+bfaPQ801VbHvZCUFeeDCOFbG2BAOA2t6OIjuw==", "debtor"=>"5", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"55", "status"=>"5", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:43:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 1912)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:47:in `block in update'
+app/controllers/invoices_controller.rb:46:in `update'
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:22:16 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.6ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1835)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 2.3ms | Allocations: 8813)
+
+
+  
+ActionView::Template::Error (undefined method `debtor' for nil:NilClass):
+     6: 
+     7:   <div class="mb-3 log_in_ms">
+     8:     <%= form.label :deudor %>
+     9:     <%= form.text_field :debtor, class:"form-control", placeholder: @advance.debtor %>
+    10:   </div>
+    11: 
+    12:   <div class="mb-3 log_in_ms">
+  
+app/views/invoices/edit.html.erb:9
+app/views/invoices/edit.html.erb:5
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:22:25 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1860)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 2828)
+
+
+  
+ActionView::Template::Error (undefined method `debtor' for nil:NilClass):
+     6: 
+     7:   <div class="mb-3 log_in_ms">
+     8:     <%= form.label :deudor %>
+     9:     <%= form.text_field :debtor, class:"form-control", placeholder: @advance.debtor %>
+    10:   </div>
+    11: 
+    12:   <div class="mb-3 log_in_ms">
+  
+app/views/invoices/edit.html.erb:9
+app/views/invoices/edit.html.erb:5
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:22:52 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 5145)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.3ms | Allocations: 16166)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:23:07 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"FZ/UkiVX9n4pRyARkZMXbLAEegNZYtlVSGML6YOcc0AMLRPpcHFfUI9qT/9A5yi4SUc/izQOpM+iCxf3uZIN9Q==", "debtor"=>"5", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"5", "status"=>"55", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:44:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms | Allocations: 1912)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:48:in `block in update'
+app/controllers/invoices_controller.rb:47:in `update'
+Started POST "/update" for ::1 at 2021-11-08 13:23:45 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"FZ/UkiVX9n4pRyARkZMXbLAEegNZYtlVSGML6YOcc0AMLRPpcHFfUI9qT/9A5yi4SUc/izQOpM+iCxf3uZIN9Q==", "debtor"=>"5", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"5", "status"=>"55", "user_id"=>"", "commit"=>"Save "}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[36mAdvance Update (1.4ms)[0m  [1m[33mUPDATE "advances" SET "final_amount" = ?, "advance_per" = ?, "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["final_amount", 5.0], ["advance_per", 5.0], ["status", "55"], ["user_id", nil], ["updated_at", "2021-11-08 16:23:45.790539"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.6ms | Allocations: 4111)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:44:in `block in update'
+app/controllers/invoices_controller.rb:43:in `update'
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:24:41 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 29.3ms | ActiveRecord: 1.5ms | Allocations: 20354)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:24:45 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"dDPD9CqlhiN0z/E+e9Emk6zqzjc2Lz+LQqElabl3N1RtgQSPf4MvDdLintCqpRlHVamLv1tDQhGoyTl3g3lJ4Q==", "debtor"=>"4", "final_amount"=>"4", "advance_per"=>"4", "invoice_number"=>"4", "status"=>"4", "user_id"=>"", "commit"=>"Save "}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+  [1m[36mAdvance Update (1.8ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "final_amount" = ?, "advance_per" = ?, "invoice_number" = ?, "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "4"], ["final_amount", 4.0], ["advance_per", 4.0], ["invoice_number", 4], ["status", "4"], ["user_id", nil], ["updated_at", "2021-11-08 16:24:45.645205"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.0ms | Allocations: 3855)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:46:in `block in update'
+app/controllers/invoices_controller.rb:45:in `update'
+Started POST "/update" for ::1 at 2021-11-08 13:25:14 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"dDPD9CqlhiN0z/E+e9Emk6zqzjc2Lz+LQqElabl3N1RtgQSPf4MvDdLintCqpRlHVamLv1tDQhGoyTl3g3lJ4Q==", "debtor"=>"4", "final_amount"=>"4", "advance_per"=>"4", "invoice_number"=>"4", "status"=>"4", "user_id"=>"", "commit"=>"Save "}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+  [1m[36mAdvance Update (1.6ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "final_amount" = ?, "advance_per" = ?, "invoice_number" = ?, "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "4"], ["final_amount", 4.0], ["advance_per", 4.0], ["invoice_number", 4], ["status", "4"], ["user_id", nil], ["updated_at", "2021-11-08 16:24:45.645205"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:46:in `block in update'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.8ms | Allocations: 3919)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:46:in `block in update'
+app/controllers/invoices_controller.rb:45:in `update'
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:26:06 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"dDPD9CqlhiN0z/E+e9Emk6zqzjc2Lz+LQqElabl3N1RtgQSPf4MvDdLintCqpRlHVamLv1tDQhGoyTl3g3lJ4Q==", "debtor"=>"4", "final_amount"=>"4", "advance_per"=>"4", "invoice_number"=>"4", "status"=>"4", "user_id"=>"", "commit"=>"Save "}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 1151)
+
+
+  
+NoMethodError (undefined method `user_id' for nil:NilClass):
+  
+app/controllers/invoices_controller.rb:43:in `update'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-11-08 13:29:41 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 79.8ms | Allocations: 17267)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 146ms (Views: 121.6ms | ActiveRecord: 2.1ms | Allocations: 30426)
+
+
+Started GET "/advances/4/edit" for ::1 at 2021-11-08 13:29:46 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 14.4ms | Allocations: 6684)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 46.3ms | ActiveRecord: 0.3ms | Allocations: 17224)
+
+
+Started POST "/update" for ::1 at 2021-11-08 13:29:50 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"fGqKDKl7TJ2EJh7zWctaxVZiC1wxm2uMdOx/A3hYj71l2E13/F3lsyILcR2Iv2URryFO1Fz3FhaehGMdQlbxCA==", "debtor"=>"4", "final_amount"=>"4", "advance_per"=>"4", "invoice_number"=>"4", "status"=>"4", "user_id"=>"", "commit"=>"Save "}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+  [1m[36mAdvance Update (1.3ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "final_amount" = ?, "advance_per" = ?, "invoice_number" = ?, "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "4"], ["final_amount", 4.0], ["advance_per", 4.0], ["invoice_number", 4], ["status", "4"], ["user_id", nil], ["updated_at", "2021-11-08 16:29:50.551373"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms | Allocations: 4012)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:47:in `block in update'
+app/controllers/invoices_controller.rb:46:in `update'
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:31:30 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 34.8ms | Allocations: 9663)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 57.7ms | ActiveRecord: 1.9ms | Allocations: 20666)
+
+
+Started GET "/advances/4/edit" for 127.0.0.1 at 2021-11-08 13:31:34 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4818)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 33.8ms | ActiveRecord: 0.4ms | Allocations: 14661)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:31:42 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"hoFXx7nl7qTjLaTZpqBVspenm6cghzqmChgKQW6jEFefM5C87MNHikUAyzd31GpmbuTeL03rRzzgcBZfVK1u4g==", "debtor"=>"5", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"5", "status"=>"5", "user_id"=>"", "commit"=>"Save "}
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[36mAdvance Update (1.2ms)[0m  [1m[33mUPDATE "advances" SET "final_amount" = ?, "advance_per" = ?, "status" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["final_amount", 5.0], ["advance_per", 5.0], ["status", "5"], ["user_id", nil], ["updated_at", "2021-11-08 16:31:42.332052"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.5ms | Allocations: 3847)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:48:in `block in update'
+app/controllers/invoices_controller.rb:47:in `update'
+Started GET "/advances/4/edit" for 127.0.0.1 at 2021-11-08 13:33:26 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 15.5ms | Allocations: 6819)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 136ms (Views: 90.3ms | ActiveRecord: 1.5ms | Allocations: 31589)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:33:30 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"adnXQZuqVdAs+Mq1qDlWjAPxtwnoPGDhCO/r6A6SaWtwaxA6zoz8/orVpVt5TWlY+rLygYVQHXvih/f2NJwX3g==", "debtor"=>"5", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"5", "status"=>"5", "user_id"=>"", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:43:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+  [1m[36mAdvance Update (8.1ms)[0m  [1m[33mUPDATE "advances" SET "user_id" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["user_id", nil], ["advance_per", 5.0], ["status", "5"], ["final_amount", 5.0], ["updated_at", "2021-11-08 16:33:30.369103"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/invoices_controller.rb:47:in `block in update'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 8.5ms | Allocations: 4545)
+
+
+  
+ActiveRecord::NotNullViolation (SQLite3::ConstraintException: NOT NULL constraint failed: advances.user_id):
+  
+app/controllers/invoices_controller.rb:47:in `block in update'
+app/controllers/invoices_controller.rb:46:in `update'
+Started GET "/login" for 127.0.0.1 at 2021-11-08 13:37:33 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#login as HTML
+  Parameters: {"method"=>:get}
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 111.4ms | Allocations: 2358)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 142ms (Views: 139.9ms | ActiveRecord: 0.0ms | Allocations: 12041)
+
+
+Started POST "/check_login" for 127.0.0.1 at 2021-11-08 13:37:36 -0300
+Processing by UsersController#check_login as HTML
+  Parameters: {"authenticity_token"=>"aSiZdXbZ0d3JBoX/4XxhRcLF7xQhNujPX4hYf4jWjIWdwdH0ev+mQBggnRF4ACpznW+36uDxknLB7UXxg8L4Cw==", "email"=>"1", "password"=>"[FILTERED]", "commit"=>"Save "}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `check_login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 638ms (ActiveRecord: 1.6ms | Allocations: 5009)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:37:36 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 210.8ms | Allocations: 11827)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 402ms (Views: 234.6ms | ActiveRecord: 2.4ms | Allocations: 24793)
+
+
+Started GET "/advances/4/edit" for 127.0.0.1 at 2021-11-08 13:37:39 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4812)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.3ms | Allocations: 14634)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:37:43 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"5vRUq4CBTOKiSGKCJWrVTwqCbR/BHqf3hIWYdWR3NYX/RpPQ1aflzARlDWz0Huqb88Eol6xy2m1u7YRrXnlLMA==", "debtor"=>"55", "final_amount"=>"5", "advance_per"=>"5", "invoice_number"=>"5", "status"=>"55", "user_id"=>"1", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:44:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[36mAdvance Update (0.4ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "55"], ["advance_per", 5.0], ["status", "55"], ["final_amount", 5.0], ["updated_at", "2021-11-08 16:37:43.451659"], ["id", 4]]
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+Redirected to http://localhost:3000/?notice=Advance+was+successfully+updated.
+Completed 302 Found in 36ms (ActiveRecord: 8.2ms | Allocations: 4475)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:37:43 -0300
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.1ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 24.9ms | Allocations: 5602)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 0.9ms | Allocations: 15793)
+
+
+Started GET "/advances/5/edit" for 127.0.0.1 at 2021-11-08 13:37:51 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4829)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.2ms | Allocations: 14355)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:37:56 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"AC9D3lsFmi7tutOsi7vvp+yiT66haFSNzoXnOBjha78ZnYSlDiMzAEuXvEJaz9BzFeEKJswEKRck7fsmIu8VCg==", "debtor"=>"6", "final_amount"=>"6", "advance_per"=>"6", "invoice_number"=>"6", "status"=>"6", "user_id"=>"1", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:44:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[36mAdvance Update (0.4ms)[0m  [1m[33mUPDATE "advances" SET "user_id" = ?, "debtor" = ?, "invoice_number" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["user_id", 1], ["debtor", "6"], ["invoice_number", 6], ["advance_per", 6.0], ["status", "6"], ["final_amount", 6.0], ["updated_at", "2021-11-08 16:37:56.081748"], ["id", 5]]
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[35m (143.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+Redirected to http://localhost:3000/?notice=Advance+was+successfully+updated.
+Completed 302 Found in 163ms (ActiveRecord: 144.1ms | Allocations: 4540)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:37:56 -0300
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.1ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.6ms | Allocations: 5642)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 0.7ms | Allocations: 15794)
+
+
+Started GET "/advances/12/edit" for 127.0.0.1 at 2021-11-08 13:38:05 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4828)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.2ms | Allocations: 14402)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:38:11 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"UxAl8nweV6FHOWRWf501dSCgQwxlXLD9xK3t8fIXpUxKouKJKTj+j+EUC7iu6Qqh2eMGhAgwzWcuxfHvyBnb+Q==", "debtor"=>"EMPRESA POG", "final_amount"=>"1", "advance_per"=>"1", "invoice_number"=>"1", "status"=>"1", "user_id"=>"1", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:44:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[36mAdvance Update (0.5ms)[0m  [1m[33mUPDATE "advances" SET "user_id" = ?, "debtor" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["user_id", 1], ["debtor", "EMPRESA POG"], ["advance_per", 1.0], ["status", "1"], ["final_amount", 1.0], ["updated_at", "2021-11-08 16:38:11.848047"], ["id", 12]]
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+  [1m[35m (129.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:48:in `block in update'
+Redirected to http://localhost:3000/?notice=Advance+was+successfully+updated.
+Completed 302 Found in 149ms (ActiveRecord: 129.7ms | Allocations: 4507)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:38:11 -0300
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 16.7ms | Allocations: 5669)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 0.9ms | Allocations: 15816)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:40:40 -0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 42.3ms | Allocations: 11453)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 68.1ms | ActiveRecord: 3.5ms | Allocations: 27933)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:40:43 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.7ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.9ms | Allocations: 5711)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 1.4ms | Allocations: 15877)
+
+
+Started GET "/advances/8/edit" for 127.0.0.1 at 2021-11-08 13:40:47 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 6073)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.3ms | Allocations: 16351)
+
+
+Started GET "/advances/12/edit" for 127.0.0.1 at 2021-11-08 13:41:18 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5700)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.2ms | Allocations: 15218)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:41:35 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"Iv6BpCMaZ8TdonZnhifYp0Y+Vpqa28WwUzd92HoXAZQ7TEbfdjzO6nuPGYlXU+dzv30TEve3uCq5X2HGQBl/IQ==", "debtor"=>"POGGERS", "final_amount"=>"3", "advance_per"=>"3", "invoice_number"=>"3", "status"=>"3", "user_id"=>"2", "commit"=>"Save "}
+  [1m[36mAdvance Load (2.1ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:41:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[36mAdvance Update (1.2ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "invoice_number" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "user_id" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "POGGERS"], ["invoice_number", 3], ["advance_per", 3.0], ["status", "3"], ["final_amount", 3.0], ["user_id", 2], ["updated_at", "2021-11-08 16:41:35.200827"], ["id", 12]]
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[35m (130.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/?notice=Advance+was+successfully+updated.
+Completed 302 Found in 149ms (ActiveRecord: 134.3ms | Allocations: 4541)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:41:35 -0300
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.1ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5653)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 47.9ms | ActiveRecord: 0.8ms | Allocations: 15844)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-11-08 13:41:44 -0300
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:41:44 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.9ms | Allocations: 4851)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.5ms | Allocations: 14449)
+
+
+Started POST "/delete_advance/12" for 127.0.0.1 at 2021-11-08 13:41:47 -0300
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"12"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:57:in `delete_advance'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+  [1m[36mAdvance Destroy (1.1ms)[0m  [1m[31mDELETE FROM "advances" WHERE "advances"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+  [1m[35m (108.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms (ActiveRecord: 109.8ms | Allocations: 3879)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:41:47 -0300
+Processing by PagesController#home as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 13.9ms | Allocations: 4492)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.4ms | Allocations: 14268)
+
+
+Started GET "/login" for 127.0.0.1 at 2021-11-08 13:41:53 -0300
+Processing by UsersController#login as HTML
+  Parameters: {"method"=>:get}
+  Rendering users/login.html.erb within layouts/application
+  Rendered users/login.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2305)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 11873)
+
+
+Started POST "/check_login" for 127.0.0.1 at 2021-11-08 13:41:55 -0300
+Processing by UsersController#check_login as HTML
+  Parameters: {"authenticity_token"=>"oJA10haDabsqrmJFbAVt2BlFfMhSs+Ul3bphUUQEzVhUeX1TGqUeJvuIeqv1eSbuRu8kNpN0n5hD33zfTxC51g==", "email"=>"1", "password"=>"[FILTERED]", "commit"=>"Save "}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38:in `check_login'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 945)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:41:55 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5285)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 52ms (Views: 44.4ms | ActiveRecord: 0.8ms | Allocations: 15456)
+
+
+Started GET "/anticipate_invoice" for 127.0.0.1 at 2021-11-08 13:41:58 -0300
+Processing by InvoicesController#anticipate_invoice as HTML
+  Rendering invoices/anticipate_invoice.html.erb within layouts/application
+  Rendered invoices/anticipate_invoice.html.erb within layouts/application (Duration: 103.2ms | Allocations: 4156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 133ms (Views: 131.3ms | ActiveRecord: 0.0ms | Allocations: 13320)
+
+
+Started POST "/pay_invoice" for 127.0.0.1 at 2021-11-08 13:42:08 -0300
+Processing by InvoicesController#pay_invoice as HTML
+  Parameters: {"authenticity_token"=>"Av2mX3pfutQ995hxUhUHMYATG+5Q23RbMKFSEAEm5h70LwkkX1GTrrTNr7Ptc6bcntVy66IYLP6GosLJRqb6cQ==", "debtor"=>"poggers", "final_amount"=>"43", "advance_per"=>"23", "invoice_number"=>"1", "status"=>"procesando", "user_id"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:21:in `block in pay_invoice'
+  [1m[36mAdvance Create (0.5ms)[0m  [1m[32mINSERT INTO "advances" ("user_id", "debtor", "date", "invoice_number", "advance_per", "status", "final_amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["debtor", "poggers"], ["date", "2021-11-08 00:00:00"], ["invoice_number", 1], ["advance_per", 23.0], ["status", "procesando"], ["final_amount", 9.89], ["created_at", "2021-11-08 16:42:08.842256"], ["updated_at", "2021-11-08 16:42:08.842256"]]
+  ↳ app/controllers/invoices_controller.rb:21:in `block in pay_invoice'
+  [1m[35m (81.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:21:in `block in pay_invoice'
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 82.1ms | Allocations: 3745)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:42:08 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:9:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/pages/home.html.erb:48
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 33.9ms | Allocations: 5707)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 62.9ms | ActiveRecord: 1.0ms | Allocations: 15873)
+
+
+Started GET "/logout" for 127.0.0.1 at 2021-11-08 13:42:14 -0300
+Processing by UsersController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:42:14 -0300
+Processing by PagesController#home as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 19.1ms | Allocations: 4870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.4ms | Allocations: 14499)
+
+
+Started GET "/advances/13/edit" for 127.0.0.1 at 2021-11-08 13:42:16 -0300
+Processing by InvoicesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:34:in `edit'
+  Rendering invoices/edit.html.erb within layouts/application
+  Rendered invoices/edit.html.erb within layouts/application (Duration: 9.6ms | Allocations: 5697)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.2ms | Allocations: 15243)
+
+
+Started POST "/update" for 127.0.0.1 at 2021-11-08 13:42:28 -0300
+Processing by InvoicesController#update as HTML
+  Parameters: {"authenticity_token"=>"O9gUu+dj05g+Ka1VhXdUnl3HJgH1JOtaz3d6R9x3ADciatPAskV6tpgEwrtUA2tKpIRjiZhIlsAlH2ZZ5nl+gg==", "debtor"=>"pogchamp", "final_amount"=>"21", "advance_per"=>"2", "invoice_number"=>"2", "status"=>"2", "user_id"=>"1", "commit"=>"Save "}
+  [1m[36mAdvance Load (0.2ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:41:in `update'
+[31mUnpermitted parameters: :authenticity_token, :commit[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[36mAdvance Update (0.4ms)[0m  [1m[33mUPDATE "advances" SET "debtor" = ?, "invoice_number" = ?, "advance_per" = ?, "status" = ?, "final_amount" = ?, "updated_at" = ? WHERE "advances"."id" = ?[0m  [["debtor", "pogchamp"], ["invoice_number", 2], ["advance_per", 2.0], ["status", "2"], ["final_amount", 21.0], ["updated_at", "2021-11-08 16:42:28.645016"], ["id", 13]]
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+  [1m[35m (224.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/?notice=Advance+was+successfully+updated.
+Completed 302 Found in 242ms (ActiveRecord: 225.2ms | Allocations: 4584)
+
+
+Started GET "/?notice=Advance+was+successfully+updated." for 127.0.0.1 at 2021-11-08 13:42:28 -0300
+Processing by PagesController#home as HTML
+  Parameters: {"notice"=>"Advance was successfully updated."}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.4ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 9], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 15.0ms | Allocations: 4882)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.6ms | Allocations: 14509)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/delete_advance/5" for 127.0.0.1 at 2021-11-08 13:44:19 -0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InvoicesController#delete_advance as */*
+  Parameters: {"orem"=>"ipsum", "name"=>"binny", "id"=>"5"}
+  [1m[36mAdvance Load (0.3ms)[0m  [1m[34mSELECT "advances".* FROM "advances" WHERE "advances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:57:in `delete_advance'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+  [1m[36mAdvance Destroy (1.3ms)[0m  [1m[31mDELETE FROM "advances" WHERE "advances"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+  [1m[35m (38.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/invoices_controller.rb:59:in `delete_advance'
+Redirected to http://localhost:3000/
+Completed 302 Found in 108ms (ActiveRecord: 41.6ms | Allocations: 10325)
+
+
+Started GET "/" for 127.0.0.1 at 2021-11-08 13:44:20 -0300
+Processing by PagesController#home as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "advances"[0m
+  ↳ app/controllers/pages_controller.rb:5:in `home'
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mAdvance Load (0.5ms)[0m  [1m[34mSELECT "advances".* FROM "advances" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/pages/home.html.erb:122
+  Rendered pages/home.html.erb within layouts/application (Duration: 46.0ms | Allocations: 11885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 114.0ms | ActiveRecord: 0.7ms | Allocations: 24063)
+
+

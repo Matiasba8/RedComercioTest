@@ -143,7 +143,7 @@
             <div class="dropdown-menu dropdown-menu-right">
 
               <%= link_to "Eliminar", "javascript:void(0)", class: "dropdown-item", onclick: "borrarAvances(#{inv.id })" %>
-              <%= link_to "Modificar", "#", class: "dropdown-item" %>
+              <%= link_to "Modificar", "advances/" + inv.id.to_s + "/edit", class: "dropdown-item" %>
 
 
 
@@ -173,13 +173,9 @@
 
 
 
-        trs.forEach(function(value,index, parent){
-            console.log(value.children[1].innerHTML)
-        })
 
         var PATTERN = e.target.value,
             filtered = myArray.filter(function (str) {
-                console.log(str)
                 return str.children[1].innerHTML.includes(PATTERN); });
 
 

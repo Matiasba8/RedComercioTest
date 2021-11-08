@@ -1,0 +1,45 @@
+<h1 class="log_in_ms">
+  Editar Factura
+</h1>
+
+<%= form_with(url: update_path) do |form| %>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :deudor %>
+    <%= form.text_field :debtor, class:"form-control", placeholder: $advance.debtor %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :monto_total %>
+    <%= form.text_field :final_amount, class:"form-control", placeholder: $advance.final_amount %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :porcentaje_de_anticipo %>
+    <%= form.text_field :advance_per, class:"form-control", placeholder: $advance.advance_per %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :numero_de_factura %>
+    <%= form.text_field :invoice_number, class:"form-control", placeholder: $advance.invoice_number %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :estado %>
+    <%= form.text_field :status, class:"form-control", placeholder: $advance.status %>
+  </div>
+
+  <div class="mb-3 log_in_ms">
+    <%= form.label :creador_de_la_factura %>
+    <%= form.text_field :user_id, class:"form-control", placeholder: $advance.user_id %>
+  </div>
+
+
+  <div class="mb-3 log_in_ms">
+    <%= form.submit class: "btn btn-primary", method: :post%>
+  </div>
+
+
+
+
+<% end %>
