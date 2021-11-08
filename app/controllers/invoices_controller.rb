@@ -5,7 +5,9 @@ class InvoicesController < ApplicationController
   end
 
   def pay_invoice
-    @advance = Advance.new(debtor: params[:debtor],date: Date.today, invoice_number: params[:invoice_number], final_amount: params[:final_amount], status: params[:status],advance_per: params[:advance_per])
+
+    puts "logged: #{$logged}"
+    @advance = Advance.new(debtor: params[:debtor],date: Date.today, invoice_number: params[:invoice_number], final_amount: params[:final_amount], status: params[:status],advance_per: params[:advance_per], user_id: $logged)
 
     puts "result: #{@advance.advance_per.to_f/100*@advance.final_amount}"
 
@@ -28,17 +30,36 @@ class InvoicesController < ApplicationController
   end
 
 
+  # DELETE
+  def delete_advance
+    @invoice.destroy
+    puts "ADVANCE"
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "User was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+
   private
+
+  # Use callbacks to share common setup or constraints between actions.
+  def set_invoice
+    @invoice = Advance.find(params[:id])
+  end
+
 
   # Only allow a list of trusted parameters through.
   def advance_params
     begin
-      params.permit(:debtor, :date,:invoice_number, :advance_per, :status)
+      params.permit(:debtor, :date,:invoice_number, :advance_per, :status, :user)
     rescue
     end
 
 
   end
+
+
 
 
 end

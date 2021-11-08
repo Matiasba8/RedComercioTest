@@ -28,6 +28,10 @@
     <%= hidden_field_tag 'status', 'procesando'  %>
   </div>
 
+  <div class="mb-3 log_in_ms">
+    <%= hidden_field_tag 'user_id', $logged  %>
+  </div>
+
 
   <div class="mb-3 log_in_ms">
     <%= form.submit class: "btn btn-primary", method: :post%>

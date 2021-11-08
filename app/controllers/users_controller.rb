@@ -35,7 +35,6 @@ class UsersController < ApplicationController
 
 
   def check_login
-    puts "LOGIN"
     check_user = User.find_by(email: params[:email])
     if check_user.present? && check_user.password == params[:password]
       session[:user_id] = check_user.id

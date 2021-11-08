@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   # Anticipos de Factura
   get "anticipate_invoice", to: "invoices#anticipate_invoice"
   post "pay_invoice", to: "invoices#pay_invoice"
+  #Borrar Anticipo
+  post "delete_advance/:id", to: "invoices#delete_advance"
 
 end

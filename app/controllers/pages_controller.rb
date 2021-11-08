@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
     $logged = session[:user_id]
     if $logged
+      @advances_current_user = User.find_by(id: $logged).advances
       flash[:notice] = "Inicio de sesion correctamente"
 
     else

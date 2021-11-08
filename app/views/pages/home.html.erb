@@ -39,13 +39,41 @@
 
 
 </ul>
+
+
 <p class="notice"></p>
 <%if session[:user_id] %>
+
+  <!--Se tiene que cambiar el estilo dependiendo el estado de la solicitud-->
+  <% @advances_current_user.each do |adv| %>
+    <div class="user_requests">
+      <h5 style="color: #F3CB8B" class="mb-3">
+        Estado de Solicitud #<%=adv.id %>
+      </h5>
+      <p>
+        Estado: <button class="btn btn-warning mr-3"> <%=adv.status  %></button>
+        <span class="mr-3">Fecha: <%=adv.date %></span>
+        <span class="mr-3"> Número de Facturas: <%=adv.invoice_number %></span>
+        <span class="mr-3"> Monto de Facturas: <%=adv.final_amount %> </span>
+        <button class="btn btn-primary mr-3"> Chat con Ejecutivo </button>
+        <button class="btn mr-3 see-details-button"> Ver Detalles </button>
+      </p>
+    </div>
+  <%end %>
+
+
+
 <%else %>
   <div class="alert alert-primary">
     Se debe de iniciar sesión antes de anticipar la factura
   </div>
 <%end %>
+
+<!--Estados de las solicitudes-->
+
+
+
+
 
 
 <div class="d-flex search-bar-style">
@@ -59,11 +87,12 @@
   </div>
 
   <div class="col-3">
-    <select class="custom-select">
+    <select class="custom-select" onchange="if (this.selectedIndex) orderTable(this.selectedIndex)">
       <option selected> Ordenar... </option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
+      <option value="1" class="sort1"> Fecha (mayor a menor)</option>
+      <option value="2" class="sort2"> Fecha (menor a mayor)</option>
+      <option value="3" class="sort3"> ID (mayor a menor)</option>
+      <option value="4" class="sort4"> ID (menor a mayor)</option>
     </select>
   </div>
 
@@ -89,12 +118,12 @@
     </tr>
     </thead>
 
-    <tbody>
+    <tbody id="tbody">
     <% @invoices.each do |inv| %>
       <tr class="tr">
-        <td > <%=inv.id %> </td>
+        <td class="ID"> <%=inv.id %> </td>
         <td> <%=inv.debtor %></td>
-        <td> <%= inv.date %> </td>
+        <td data-column="date"> <%= inv.date %> </td>
         <td> <%= inv.invoice_number %></td>
         <td> <%= inv.advance_per %> </td>
         <td> <%= inv.final_amount %><</td>
@@ -113,9 +142,8 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
 
-                <%= link_to "Mi Perfil", "#", class: "dropdown-item" %>
-                <%= link_to "Preferencias", "#", class: "dropdown-item" %>
-                <%= link_to "Log Out", logout_path, class:"dropdown-item", method: :post %>
+              <%= link_to "Eliminar", "javascript:void(0)", class: "dropdown-item", onclick: "borrarAvances(#{inv.id })" %>
+              <%= link_to "Modificar", "#", class: "dropdown-item" %>
 
 
 
@@ -132,6 +160,155 @@
 
     </tbody>
   </table>
+
+
+  <script>
+
+      function orderTable(index){
+          let selectedItem;
+          let order_items = [];
+
+          /*Fecha menor a mayor*/
+          if (index == 1){
+              selectedItem = document.querySelector(".sort1");
+          }
+
+          /*Fecha mayor a menor*/
+          else if (index == 2){
+              selectedItem = document.querySelector(".sort2");
+
+              let values = []
+              let trs = document.querySelectorAll(".tr")
+
+              let column = $(this).data('column')
+
+              trs.forEach(function(value,index, parent){
+                  values.push(value)
+              })
+
+              values.sort((a,b) => a[column] > b[column] ? 1:
+              -1)
+
+              trs.forEach(function(value,index, parent){
+                  value.remove()
+              })
+
+              let tbody = document.querySelector("#tbody")
+
+              /* Insert elements inside the table*/
+              values.forEach(function(value,index,parent){
+                  tbody.append(value)
+              })
+
+
+
+
+          }
+          /*ID Mayor a menor*/
+          else if (index == 3){
+              selectedItem = document.querySelector(".sort3");
+              let values = []
+              let trs = document.querySelectorAll(".tr")
+
+
+              trs.forEach(function(value,index, parent){
+                  values.push(value)
+              })
+
+
+              /*Sort Function*/
+              values.sort(function(a, b) {
+                  return b - a;
+              });
+
+              /* Clean table*/
+              trs.forEach(function(value,index, parent){
+                  value.remove()
+              })
+
+              let tbody = document.querySelector("#tbody")
+
+              /* Insert elements inside the table*/
+              values.forEach(function(value,index,parent){
+                  tbody.append(value)
+              })
+
+
+              console.log(values)
+
+
+          }
+          /*ID Menor a mayor*/
+          else if (index == 4){
+              selectedItem = document.querySelector(".sort4")
+              let values = []
+              let trs = document.querySelectorAll(".tr")
+
+
+              trs.forEach(function(value,index, parent){
+                  values.push(value)
+              })
+
+
+              /*Sort Function*/
+              values.sort(function(a, b) {
+                  return a - b;
+              });
+
+              /* Clean table*/
+              trs.forEach(function(value,index, parent){
+                  value.remove()
+              })
+
+              let tbody = document.querySelector("#tbody")
+
+              /* Insert elements inside the table*/
+              values.forEach(function(value,index,parent){
+                  tbody.append(value)
+              })
+
+
+              console.log(values)
+
+          }
+
+      }
+
+    function borrarAvances(avanceID){
+
+        let avance;
+        let ids = document.querySelectorAll(".ID")
+
+
+        var http = new XMLHttpRequest();
+        var url = 'delete_advance/' + avanceID;
+
+        var params = 'orem=ipsum&name=binny';
+        http.open('POST', url, true);
+
+        //Send the  proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                alert(http.responseText);
+            }
+        }
+        http.send(params);
+
+        ids.forEach(function callback(currentValue, index, array){
+
+            if (currentValue.innerHTML == avanceID){
+                currentValue.parentElement.remove()
+            }
+        })
+
+
+
+    }
+  </script>
+
+
 
   <%== pagy_nav(@pagy) %>
 

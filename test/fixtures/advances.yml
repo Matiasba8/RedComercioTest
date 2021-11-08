@@ -1,15 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  references: 
   debtor: MyString
-  date: 2021-11-05 14:41:40
+  date: 2021-11-07 16:03:36
   invoice_number: 1
-  advance_per: 1
-  status: 1
+  advance_per: 1.5
+  status: MyString
+  final_amount: 1.5
 
 two:
+  references: 
   debtor: MyString
-  date: 2021-11-05 14:41:40
+  date: 2021-11-07 16:03:36
   invoice_number: 1
-  advance_per: 1
-  status: 1
+  advance_per: 1.5
+  status: MyString
+  final_amount: 1.5
